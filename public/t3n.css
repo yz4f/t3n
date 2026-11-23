@@ -91,7 +91,9 @@
 .t3n-home .s-block--fixed-products .s-products-list-vertical-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
 .t3n-theme .t3n-home .s-block.container>salla-products-list.vertical-products>.s-products-list-vertical-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
 .t3n-theme .t3n-home .s-product-card-entry .s-product-card-sale-price h4,.t3n-theme .t3n-home .s-product-card-entry .s-product-card-price,.t3n-theme .t3n-home .s-product-card-entry .s-product-card-starting-price h4{color:#b7caff}
-.t3n-theme .t3n-home .s-product-card-entry .s-product-card-price-value{color:#b7caff;font-size:22px;font-weight:800;line-height:1.5}
+.t3n-theme .t3n-home .s-product-card-entry .s-product-card-price-value{color:#b7caff!important;font-size:22px;font-weight:800;line-height:1.5}
+.t3n-theme .t3n-home .s-product-card-entry .s-product-card-sale-price h4{color:#b7caff!important}
+.t3n-theme .s-advertisement{background-color:#131d32!important;color:#d8e4ff!important;border-bottom:1px solid #2b3b5a}
 .t3n-theme .t3n-home .s-product-card-entry .s-product-card-wishlist-btn.s-button-element{color:#d4e2ff;background:#18253de6;border-color:#546a92}
 .t3n-theme .t3n-home .s-product-card-entry .s-product-card-wishlist-btn.s-button-element{background-color:#18253d!important}
 .t3n-theme .t3n-home .s-product-card-entry salla-button.s-product-card-wishlist-btn{opacity:1}
