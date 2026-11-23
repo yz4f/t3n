@@ -1,0 +1,27 @@
+<section class="t3n-hero" aria-labelledby="t3n-hero-title">
+    <div class="container t3n-hero__grid">
+        <div class="t3n-hero__content">
+            <p class="t3n-eyebrow"><span></span> {{ theme.is_rtl ? 'تـعـن • عالمك الرقمي' : 'T3N • YOUR DIGITAL WORLD' }}</p>
+            <h2 id="t3n-hero-title">{{ theme.settings.get('t3n_hero_title') ?: (theme.is_rtl ? 'خطوتك الجاية،' : 'Your next move,') }}<br><span>{{ theme.settings.get('t3n_hero_highlight') ?: (theme.is_rtl ? 'تبدأ مع تعن.' : 'starts with T3N.') }}</span></h2>
+            <p class="t3n-hero__description">{{ theme.settings.get('t3n_hero_description') ?: (theme.is_rtl ? 'منتجات وخدمات رقمية في مكان واحد. اكتشف ما يناسبك، واطّلع على التفاصيل قبل اختيارك.' : 'Digital products and services in one place. Explore the collection and find what works for you.') }}</p>
+            <div class="t3n-hero__actions">
+                <a class="t3n-button t3n-button--primary" href="#t3n-products">{{ theme.is_rtl ? 'اكتشف المنتجات' : 'Explore products' }} <span aria-hidden="true">{{ theme.is_rtl ? '↖' : '↗' }}</span></a>
+                <a class="t3n-button t3n-button--quiet" href="{{ link('/testimonials') }}">{{ theme.is_rtl ? 'تجارب عملائنا' : 'Customer reviews' }} <span aria-hidden="true">←</span></a>
+            </div>
+            <div class="t3n-hero__notes"><span>{{ theme.is_rtl ? 'خيارات رقمية متنوعة' : 'Digital essentials' }}</span><span>{{ theme.is_rtl ? 'تفاصيل واضحة لكل منتج' : 'Clear product details' }}</span></div>
+        </div>
+        <div class="t3n-visual" aria-hidden="true">
+            <div class="t3n-visual__grid"></div>
+            <div class="t3n-orbit t3n-orbit--outer"></div><div class="t3n-orbit t3n-orbit--inner"></div>
+            <div class="t3n-chip"><div class="t3n-chip__face"><img src="{{ store.logo|cdn(350) }}" alt="" width="140" height="140" loading="eager"><span>T3N</span></div></div>
+            <div class="t3n-tag t3n-tag--top"><span class="t3n-tag__icon">⌘</span><div><small>DIGITAL EXPERIENCE</small><strong>{{ theme.is_rtl ? 'كل شيء في مكانه.' : 'Everything, connected.' }}</strong></div></div>
+            <div class="t3n-tag t3n-tag--bottom"><span class="t3n-status"></span><span>{{ theme.is_rtl ? 'جاهز لخطوتك القادمة؟' : 'Ready for your next move?' }}</span><b>↗</b></div>
+            <span class="t3n-coordinate">24° N / T3N DIGITAL</span>
+        </div>
+    </div>
+</section>
+<div class="container t3n-intro">
+    <span class="t3n-eyebrow">{{ theme.is_rtl ? 'اختيارات تعن' : 'THE T3N COLLECTION' }}</span>
+    <p>{{ theme.is_rtl ? 'اكتشف. اختر. انطلق.' : 'Explore. Choose. Go.' }}</p>
+    <span class="t3n-intro__arrow" aria-hidden="true">↓</span>
+</div>

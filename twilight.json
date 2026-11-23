@@ -26,6 +26,55 @@
     ],
     "settings": [
         {
+            "id": "t3n_design_enabled",
+            "type": "boolean",
+            "format": "switch",
+            "label": "تفعيل تصميم تعن الداكن",
+            "description": "واجهة تعن باللون الداكن والأزرق مع الحفاظ على مكونات سلة.",
+            "value": true,
+            "selected": true,
+            "required": false
+        },
+        {
+            "id": "t3n_hero_enabled",
+            "type": "boolean",
+            "format": "switch",
+            "label": "إظهار مقدمة تعن في الصفحة الرئيسية",
+            "value": true,
+            "selected": true,
+            "required": false
+        },
+        {
+            "id": "t3n_hero_title",
+            "type": "string",
+            "format": "text",
+            "label": "عنوان مقدمة تعن",
+            "multilanguage": true,
+            "value": null,
+            "required": false,
+            "maxLength": 70
+        },
+        {
+            "id": "t3n_hero_highlight",
+            "type": "string",
+            "format": "text",
+            "label": "السطر المميز في المقدمة",
+            "multilanguage": true,
+            "value": null,
+            "required": false,
+            "maxLength": 70
+        },
+        {
+            "id": "t3n_hero_description",
+            "type": "string",
+            "format": "textarea",
+            "label": "وصف المقدمة",
+            "multilanguage": true,
+            "value": null,
+            "required": false,
+            "maxLength": 240
+        },
+        {
             "id": "squar_photo_bg_image_size",
             "type": "items",
             "format": "dropdown-list",

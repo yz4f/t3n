@@ -7,7 +7,14 @@
 #}
 {% extends "layouts.master" %}
 {% block content %}
+    <div class="{{ theme.settings.get('t3n_design_enabled', true) ? 't3n-home' : '' }}">
+    {% if theme.settings.get('t3n_design_enabled', true) and theme.settings.get('t3n_hero_enabled', true) %}
+        {% include 'components.home.t3n-hero' %}
+    {% endif %}
+    <div id="t3n-products" class="t3n-products" tabindex="-1">
     {% component home %}
+    </div>
+    </div>
 {% endblock %}
 {% block scripts %}
     <script defer src="{{ 'home.js' | asset }}"></script>
