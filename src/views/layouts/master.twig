@@ -82,7 +82,12 @@
     {% if theme.settings.get('t3n_design_enabled', true) %}
         <link rel="stylesheet" href="{{ 't3n.css' | asset }}">
     {% endif %}
-    <link rel="stylesheet" href="{{ theme.font.url ?: 'https://cdn.salla.network/fonts/default.css?v=2.0.5' }}"/>
+    {% set font_stylesheet = theme.font.url ?: 'https://cdn.salla.network/fonts/default.css?v=2.0.5' %}
+    {# Normalize repeated font paths returned in development previews. #}
+    {% if '/fonts/' in font_stylesheet %}
+        {% set font_stylesheet = (font_stylesheet|split('/fonts/')|first) ~ '/fonts/' ~ (font_stylesheet|split('/fonts/')|last) %}
+    {% endif %}
+    <link rel="stylesheet" href="{{ font_stylesheet }}"/>
     <link rel="stylesheet" href="{{ 'fonts/sallaicons.css'|cdn }}"/>
     
     <style>
