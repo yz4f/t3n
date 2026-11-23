@@ -17,7 +17,6 @@
 
 		<div class="flex gap-4">
 		  {# trust badges #}
-		  <salla-trust-badges {% if theme.settings.get('footer_is_dark') %} dark {% endif %}></salla-trust-badges>
           {# vat #}
           {% if store.settings.tax.number %}
             <div class="flex rtl:space-x-reverse space-x-2 items-end">
@@ -63,10 +62,13 @@
 		</div>
 	</div>
 
-	<div class="md:flex items-center justify-between py-4 container text-center">
-		<span class="text-sm copyright-text">{% hook copyright %}</span>
+	<div class="t3n-footer-bottom container">
+		<p class="t3n-copyright">
+            <a class="t3n-copyright__brand" href="{{ store.url }}">{{ store.name }}</a>
+            <span class="t3n-copyright__divider" aria-hidden="true"></span>
+            <span>© {{ 'now'|date('Y') }} <span class="t3n-copyright__rights">{{ theme.is_rtl ? 'جميع الحقوق محفوظة' : 'All rights reserved' }}</span></span>
+        </p>
 		<salla-payments></salla-payments>
 	</div>
-</div>
 
 <span class="hidden bottom-2 rtl:pl-24 ltr:pr-24 md:grid-cols-3 opacity-40"></span></footer>
